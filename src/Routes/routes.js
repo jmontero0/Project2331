@@ -1,20 +1,20 @@
 const routes = (app) => {
-    //Contact route to the whole collection or posting to db.
-    app.route(`/contact`)
+    //Contact route (whole collection or posting to db)
+    app.route('/contact')
     .get((req,res) => {
-        res.send(`GET request was succesful`)
+        res.send('GET request was sucessfull')
     })
     .post((req,res) => {
-        res.send(`POST request was succesful`)
+        res.send('POST request was sucessfull')
     });
-    
-    //For specific IDs that are in the database
-    app.route(`/contact/:contactID`)
+
+    //specific id's in database
+    app.route('/contact/:contactId')
     .put((req,res) => {
-        res.send(`PUT request was succesful`)
+        res.send('PUT request was successfull')
     })
     .delete((req,res) => {
-        res.send(`DELETE request was succesful`)
+        res.send('DELETE request was sucessfull')
     });
 }
 
