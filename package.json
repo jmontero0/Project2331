@@ -1,7 +1,7 @@
 {
   "name": "pro2",
   "version": "1.0.0",
-  "description": "",
+  "description": "REST API for Networking Project 2",
   "main": "index.js",
   "dependencies": {
     "babel": "^6.23.0",
