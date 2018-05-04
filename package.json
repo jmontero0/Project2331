@@ -4,7 +4,6 @@
   "description": "REST API for Networking Project 2",
   "main": "index.js",
   "dependencies": {
-    "babel": "^6.23.0",
     "express": "^4.16.3",
     "mongoose": "^5.0.16",
     "nodemon": "^1.17.3"
