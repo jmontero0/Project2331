@@ -7,7 +7,6 @@ app.get ('/', (req, res) => {
     res.send(`Node and express server running on port: ${PORT}`)
 });
 //server listens to this port
-app.listen(PORT. () => {
+app.listen(PORT, () => {
     console.log(`the server is up and running on localhost: ${PORT}`)
 });
-
