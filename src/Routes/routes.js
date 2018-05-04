@@ -4,16 +4,16 @@ const routes = (app) => {
     .get((req,res) =>{
         res.send(`GET request was succesful`)
     })
-    .post((req, res) =>{
+    .post((req,res) =>{
         res.send(`POST request was succesful`)
     });
     
-    //Fore specific IDs that are in the database
+    //For specific IDs that are in the database
     app.route(`/contact/:contactID`)
-    .put((req, res) =>{
+    .put((req,res) =>{
         res.send(`PUT request was succesful`)
     })
-    .delete((req, res) =>{
+    .delete((req,res) =>{
         res.send(`DELETE request was succesful`)
     });
 }
