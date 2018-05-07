@@ -1,9 +1,15 @@
 const routes = (app) => {
     //Contact route (whole collection or posting to db)
     app.route('/contact')
-    .get((req,res) => {
-        res.send('GET request was sucessful')
+    .get((req,res, next) => {
+        //middleware
+        console.log(`Request from: ${req.oirginalUrl}`)
+        console.log(`Request used: ${req.method}`)
+        next();
+    }, (req,res) =>{
+        res.send(`GET request was succesful`)
     })
+
     .post((req,res) => {
         res.send('POST request was sucessful')
     });
