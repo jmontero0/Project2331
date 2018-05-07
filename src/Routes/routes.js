@@ -1,26 +1,25 @@
+import { addNewContact } from "../Controllers/controller";
+
 const routes = (app) => {
     //Contact route (whole collection or posting to db)
     app.route('/contact')
-    .get((req,res, next) => {
+    .get((req,res,next) => {
         //middleware
-        console.log(`Request from: ${req.oirginalUrl}`)
-        console.log(`Request used: ${req.method}`)
+        console.log(`Request from: ${req.originalUrl}`)
+        console.log(`Request used ${req.method}`)
         next();
     }, (req,res) =>{
-        res.send(`GET request was succesful`)
+        res.send('GET request sucessful')
     })
-
-    .post((req,res) => {
-        res.send('POST request was sucessful')
-    });
+    .post(addNewContact);
 
     //specific id's in database
     app.route('/contact/:contactId')
     .put((req,res) => {
-        res.send('PUT request was successful')
+        res.send('PUT request was successfull')
     })
     .delete((req,res) => {
-        res.send('DELETE request was sucessful')
+        res.send('DELETE request was sucessfull')
     });
 }
 
