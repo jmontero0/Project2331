@@ -7,12 +7,13 @@ const PORT = 3000;
 
 routes(app);
 
-//prints to homepage
-app.get ('/', (req, res) => {
+//prints stuff to homepage
+app.get('/', (req, res) => {
     res.send(`Node and express server running on port: ${PORT}`)
 });
 
-//server listens to this port
+
+//server is listening on this port
 app.listen(PORT, () => {
-    console.log(`the server is up and running on localhost: ${PORT}`)
+    console.log(`the server is up and running on localhost:${PORT}`)
 });
