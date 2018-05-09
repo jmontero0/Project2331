@@ -1,17 +1,17 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-import routes from './src/Routes/routes';
+import routes from './src/routes/routes';
 
 
 const app = express();
 const PORT = 3000;
 
 //mongo connection
-mongoose.connect('mongodb://localhost:3000/test');
+mongoose.connect('mongodb://localhost/project2');
 
 //bodyparser
-app.use(bodyParser.urlencoded({ extended: true}));//parse incoming requests with urlencoded payloads
+app.use(bodyParser.urlencoded({ extended: true }));//parse incoming requests with urlencoded payloads
 app.use(bodyParser.json());//parse incoming requests with json payloads
 
 routes(app);

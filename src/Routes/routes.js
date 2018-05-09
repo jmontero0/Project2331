@@ -1,4 +1,4 @@
-import { addNewContact } from "../Controllers/controller";
+import { addNewContact } from "../controllers/controller";
 
 const routes = (app) => {
     //Contact route (whole collection or posting to db)
