@@ -2,7 +2,8 @@ import {
     addNewContact,
   getContacts,
   getSpecificContact,
-  updateContact
+  updateContact,
+  deleteContact
 } from "../Controllers/controller";
 
 const routes = app => {
