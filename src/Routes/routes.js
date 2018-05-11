@@ -17,10 +17,7 @@ const routes = app => {
     .route("/contact/:contactId")
     .get(getSpecificContact)
     .put(updateContact)
-    .delete((req, res) => {
-      res.send("DELETE request was sucessfull");
-    });
+    .delete(deleteContact);
 };
-
 
 export default routes;
