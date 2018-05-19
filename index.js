@@ -25,4 +25,26 @@ app.get('/', (req, res) => {
 //server is listening on this port
 app.listen(PORT, () => {
     console.log(`the server is up and running on localhost:${PORT}`)
+
+});
+
+(function(){
+    `use strict`;
+    var app = angular.module(`contactsApp`, []);
+
+    app.controller(`contactsController`, function($scope, $http) {
+
+        $http.get(`http://localhost:3000/contact`)
+        .then(function(response) {
+            $scope.contacts = response.data;
+        });
+
+        $scope.saveContact = function(contact) {
+            $http.post('http://localhost:3000/contact', contact)
+            .then(function(response) {
+                $scope.contacts.push(response.data);
+            });
+            
+        };
+    });
 });
