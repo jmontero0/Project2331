@@ -16,9 +16,12 @@ app.use(bodyParser.json());//parse incoming requests with json payloads
 
 routes(app);
 
+var  path = require("path");
+
 //prints stuff to homepage
 app.get('/', (req, res) => {
-    res.send(`Node and express server running on port: ${PORT}`)
+
+    res.sendFile(path.join(__dirname+`/database.html`));
 });
 
 
@@ -39,7 +42,7 @@ app.listen(PORT, () => {
             $scope.contacts = response.data;
         });
 
-        $scope.saveContact = function(contact) {
+         $scope.saveContact = function(contact) {
             $http.post('http://localhost:3000/contact', contact)
             .then(function(response) {
                 $scope.contacts.push(response.data);
