@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>COSC 331 Database</title>
+    <title>Spooky Ghost Database</title>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body>
-    <h1>Database</h1>
-    <p>Please fill out the information below.</p>
+<body bgcolor="#525252">
+    <h1><font color ="white">Ghost Database</font></h1>
+    <img src ="https://media.pixcove.com/K/3/8/Ghost-Flicker-Spooky-Halloween-Cartoon-Free-Image--4858.jpg" style = "width:250px;height:250px;">
+    <p><font color ="white">Welcome to the Ghost Database. Please fill out the information below.</font></p>  
     <div class ="container">
 
         <div class="col-sm-6">
-            <form ng-submit="saveContact(contact)">
+            <form method="POST" action="/contact">
                 <div class="form-group">
-                    <input type="text" placeholder="First Name" ng-model="contact.firstName" class="form-control">
+                    <input type="text" placeholder="First Name" ng-model="index.firstName" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <input type="text" placeholder="Last Name" ng-model="contact.lastName" class="form-control">
+                    <input type="text" placeholder="Last Name" ng-model=index.lastName" class="form-control">
                 </div>
                 
                 <div class="form-group">
-                    <input type="text" placeholder="Email" ng-model="contact.email" class="form-control">
+                    <input type="text" placeholder="Email" ng-model="index.email" class="form-control">
                 </div>
                 
                 <div class="form-group">
-                    <input type="text" placeholder="Company" ng-model="contact.company" class="form-control">
+                    <input type="text" placeholder="Company" ng-model="index.company" class="form-control">
                 </div>
                 
                 <div class="form-group">
-                    <input type="text" placeholder="Phone Number" ng-model="contact.phone" class="form-control">
+                    <input type="text" placeholder="Phone Number" ng-model="index.phone" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>                
             </form>
         </div>
 
-        <div class="col-sm-6">
-            <u1 class="list-group">
-                <li class="list-group-item" ng-repeat="contact in contacts">
-                    <h2>{{contact.firstName + ' ' +contact.lastName}}</h2>
-                    <p>{{contact.email}}</p>
-                    <p>{{contact.company}}</p>
-                    <p>{{contact.phone}}</p>
-                </li>
-            </u1>
-        </div> -->
     </div>
 
     <script src="https://https://ajax.googleapis.com/ajax/libs/angularjs.min.js"></script>
-    <script src="routes.js"></script> -->
+    <script src="index.js"></script> 
  
 </body>
 </html>

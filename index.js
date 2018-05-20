@@ -39,13 +39,13 @@ app.listen(PORT, () => {
 
         $http.get(`http://localhost:3000/contact`)
         .then(function(response) {
-            $scope.contacts = response.data;
+            $scope.contacts = response.model;
         });
 
-         $scope.saveContact = function(contact) {
+        $scope.saveContact = function(contact) {
             $http.post('http://localhost:3000/contact', contact)
             .then(function(response) {
-                $scope.contacts.push(response.data);
+                $scope.contacts.push(response.model);
             });
             
         };
