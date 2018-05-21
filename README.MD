@@ -1,5 +1,7 @@
 FrontEnd BackEnd Interactions
+
 Author: Justin Montero
+
 This program helps us show the interactions between a frontend, that is being displayed on a webpage, and our backend database using mongodb. The interactions that will be shown will be using GET, POST, PUT, and DELETE requests that will occur on the frontend and then getting a response from our backend returning contacts that we made up for our database.
 
 Things that will be needed:
@@ -12,6 +14,7 @@ Github account
 A Source Code Editor
 Web browser
 
+
 Getting started:
 
 1) Install mongoDB
@@ -22,6 +25,7 @@ Getting started:
 6) Press f12 to open developer tools and go to network tab
 7) Insert information on website and enter
 8) Requests will pop up under the network tab
+
 
 License:
 
