@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import routes from './src/Routes/routes';
+import { ContactSchema } from './src/Models/model';
 
 
 const app = express();
@@ -24,6 +25,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname+`/database.html`));
 });
 
+var router = express.Router();
+
+router.get(`/`, function(req, res, next){
+    res.sender(`index`);
+});
 
 //server is listening on this port
 app.listen(PORT, () => {

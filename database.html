@@ -10,37 +10,38 @@
     <img src ="https://media.pixcove.com/K/3/8/Ghost-Flicker-Spooky-Halloween-Cartoon-Free-Image--4858.jpg" style = "width:250px;height:250px;">
     <p><font color ="white">Welcome to the Ghost Database. Please fill out the information below.</font></p>  
     <div class ="container">
-
-        <div class="col-sm-6">
-            <form method="POST" action="/contact">
-                <div class="form-group">
-                    <input type="text" placeholder="First Name">
+            <form method="POST" action="contact">
+                <div class="input"></div>
+                    <label for="title">First Name</label>
+                    <input type="text" id="firstName" name="firstName">
                 </div>
 
-                <div class="form-group">
-                    <input type="text" placeholder="Last Name">
+                <div class="input">
+                    <label for="title">Last Name</label>
+                    <input type="text" id="lastName" name="lastName">
                 </div>
                 
-                <div class="form-group">
-                    <input type="text" placeholder="Email">
+                <div class="input">
+                    <label for="title">Email</label>
+                    <input type="text" id="email" name="email">
                 </div>
                 
-                <div class="form-group">
-                    <input type="text" placeholder="Company">
+                <div class="input">
+                    <label for="title">Company</label>
+                    <input type="text" id="company" name="company">
                 </div>
                 
-                <div class="form-group">
-                    <input type="text" placeholder="Phone Number">
+                <div class="input">
+                    <label for="title">Phone</label>
+                    <input type="text" id="phone" name="phone">
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>                
             </form>
         </div>
-
     </div>
-
-    <script src="https://https://ajax.googleapis.com/ajax/libs/angularjs.min.js"></script>
-    <script src="index.js"></script> 
+    
+    <script src="index.js"></script>
  
 </body>
 </html>
